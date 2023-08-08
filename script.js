@@ -23,4 +23,3 @@ getquote(api_url);
 LinkedIn_Share.addEventListener("click", function() {
     window.open("https://www.linkedin.com/share?text=" + quote.innerHTML + "%0A%0A __ by  " + author.innerHTML, "LinkedIn window", "width=600, height=500");
 });
-
