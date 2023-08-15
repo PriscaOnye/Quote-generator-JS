@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,19 +9,45 @@
 }
 
 body {
-    background: #bbc6fa;
+    height: 100vh;
+
+    font-size: 16px;
+    font-family: 'Courier Prime', monospace, 'Roboto', sans-serif;
+
+    background: green;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
 .quote-box {
-    background: #fff;
+
+    width: 90%;
+    max-width: 1000px;
+
+    height: fit-content;
+    max-height: 90vh;
+
+    overflow: auto;
+    padding: 1rem;
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    border-radius: 15px;
+    background-color: white;
+
+    /* background: #fff;
     width: 700px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 40px;
-    border-radius: 10px;
+    border-radius: 10px; */
     text-align: center;
     box-shadow: 0 10px 20px 0px rgba(0,0,0,0.15);
 }
@@ -46,7 +76,7 @@ body {
 }
 
 .quote-box blockquote::before, .quote-box blockquote::after {
-    content: '"';
+    content: ' " ';
 }
 
 .quote-box span {
@@ -96,4 +126,32 @@ body {
 .quote-box button:nth-child(2){
     background: transparent;
     color: #333;
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    .quote-box  {
+        width: 85%;
+        max-width: 800px;
+        
+        height: fit-content;
+        max-height: 90vh;
+    
+        padding: 1.5rem 2rem;
+        overflow: auto;
+    }
+
+}
+
+@media screen and (min-width: 769px) {
+    .quote-box  {
+        width: 70%;
+        max-width: 800px;
+        
+        height: fit-content;
+        max-height: 80vh;
+    
+        padding: 1.5rem 2rem;
+        overflow: auto;
+    }
+
 }
