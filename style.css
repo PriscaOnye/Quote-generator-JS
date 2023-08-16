@@ -21,6 +21,10 @@ body {
     justify-content: center;
 }
 
+svg {
+    width: 20px;
+    height: 20px;
+}
 
 .quote-box {
 
@@ -40,14 +44,6 @@ body {
     border-radius: 15px;
     background-color: white;
 
-    /* background: #fff;
-    width: 700px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 40px;
-    border-radius: 10px; */
     text-align: center;
     box-shadow: 0 10px 20px 0px rgba(0,0,0,0.15);
 }
@@ -96,25 +92,14 @@ body {
     left: -30px;
 }
 
-.quote-box div {
+.everybutton {
     width: 100%;
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-}
-
-.quote-box button {
-    background: #177ce5;
-    color: #fff;
-    border-radius: 25px;
-    border: 1px solid #177ce5;
-    width: 150px;
-    height: 50px;
+    margin-top: 20px;
+    gap: 1rem;
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 5px;
-    cursor: pointer;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 .quote-box button img {
@@ -123,10 +108,76 @@ body {
     margin-right: 10px;
 }
 
-.quote-box button:nth-child(2){
+button#new-quote {
+    background: #177ce5;
+    color: #fff;
+    border-radius: 25px;
+    border: 1px solid #177ce5;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    cursor: pointer;
+}
+
+
+button#share{
+    background: #177ce5;
+    color: #fff;
+    border-radius: 25px;
+    border: 1px solid #177ce5;
+    width: 120px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
     background: transparent;
     color: #333;
 }
+
+.otherButtons {
+    gap: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+button.socialButton {
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    background-color: white;
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button.socialButton:hover{
+    transition: 0.5s;
+    transform: translate(0, -10px);
+}
+
+button.socialButton:hover svg{
+    fill: #ffffff;
+    color: "#fff";
+}
+
+button#copy:hover {
+    background-color: #3a5999;
+}
+
+button#speak:hover {
+    background-color: #25d366;
+}
+
 
 @media screen and (min-width: 426px) and (max-width: 768px) {
     .quote-box  {
@@ -153,5 +204,22 @@ body {
         padding: 1.5rem 2rem;
         overflow: auto;
     }
+}
 
+@media screen and (min-width: 600px) {
+    .everybutton {
+        gap: 0;
+        flex-direction: row;
+    }
+
+    svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    button.socialButton {
+        width: 50px;
+        height: 50px;
+    }
+    
 }
