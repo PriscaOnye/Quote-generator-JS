@@ -38,8 +38,8 @@ copyButton.addEventListener("click", function() {
 
 // read quote button
 readButton.addEventListener("click", function() {
-    const utterance = new SpeechSynthesisUtterance(quoteInfo + " by " + authorInfo);
-    window.speechSynthesis.speak(utterance);
+    const readOut = new SpeechSynthesisUtterance(quoteInfo + " by " + authorInfo);
+    window.speechSynthesis.speak(readOut);
 });
 
 // linkedIn share
